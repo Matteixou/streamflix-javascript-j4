@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamFlix - Catalogue</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top" aria-label="Accueil StreamFlix">Stream<span>Flix</span></a>
+      <div class="header-actions">
+        <label class="search-box" for="search">
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Rechercher un film..." autocomplete="off">
+        </label>
+        <button id="theme-toggle" class="theme-button" type="button">Mode sombre</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="page-content">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Catalogue du jour</p>
+      <h1 id="page-title">Des histoires à regarder.</h1>
+      <p class="intro-text">Explore les sélections StreamFlix, marque tes films vus et ouvre une fiche en un clic.</p>
+    </section>
+
+    <p id="no-results" class="no-results" hidden>Aucun résultat</p>
+
+    <div class="catalogue">
+      <div class="section-wrapper">
+        <div class="section-toolbar">
+          <div>
+            <p class="section-kicker">Sélection 01</p>
+            <h2>Nouveautés</h2>
+          </div>
+          <button class="section-toggle" type="button" data-target="new-releases">Masquer</button>
+        </div>
+        <section id="new-releases" class="movie-section" aria-labelledby="new-releases-title">
+          <h3 id="new-releases-title" class="visually-hidden">Nouveautés</h3>
+          <div class="movie-grid">
+            <article class="movie-card" data-genre="Science-fiction" data-year="2024">
+              <div class="poster poster-orbit"><span>ORBIT<br>FALL</span></div>
+              <div class="movie-info"><p class="movie-meta">SF · 2024 · 2h08</p><h3>Orbit Fall</h3><p>Une mission de secours bascule au bord du système solaire.</p></div>
+            </article>
+            <article class="movie-card" data-genre="Drame" data-year="2024">
+              <div class="poster poster-tide"><span>LOW<br>TIDE</span></div>
+              <div class="movie-info"><p class="movie-meta">Drame · 2024 · 1h52</p><h3>Low Tide</h3><p>Trois soeurs reviennent dans la maison de leur enfance.</p></div>
+            </article>
+            <article class="movie-card" data-genre="Thriller" data-year="2025">
+              <div class="poster poster-signal"><span>THE<br>SIGNAL</span></div>
+              <div class="movie-info"><p class="movie-meta">Thriller · 2025 · 1h46</p><h3>The Signal</h3><p>Un message impossible apparaît sur toutes les radios.</p></div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="section-wrapper">
+        <div class="section-toolbar">
+          <div>
+            <p class="section-kicker">Sélection 02</p>
+            <h2>À revoir</h2>
+          </div>
+          <button class="section-toggle" type="button" data-target="rewatch">Masquer</button>
+        </div>
+        <section id="rewatch" class="movie-section" aria-labelledby="rewatch-title">
+          <h3 id="rewatch-title" class="visually-hidden">À revoir</h3>
+          <div class="movie-grid">
+            <article class="movie-card" data-genre="Aventure" data-year="2019">
+              <div class="poster poster-monsoon"><span>MONSOON<br>ROAD</span></div>
+              <div class="movie-info"><p class="movie-meta">Aventure · 2019 · 2h14</p><h3>Monsoon Road</h3><p>Un voyage en train devient une quête inattendue.</p></div>
+            </article>
+            <article class="movie-card" data-genre="Comédie" data-year="2021">
+              <div class="poster poster-static"><span>STATIC<br>CLUB</span></div>
+              <div class="movie-info"><p class="movie-meta">Comédie · 2021 · 1h38</p><h3>Static Club</h3><p>Une radio pirate réunit les voix les plus improbables.</p></div>
+            </article>
+            <article class="movie-card" data-genre="Fantastique" data-year="2020">
+              <div class="poster poster-lumen"><span>LUMEN<br>HOUSE</span></div>
+              <div class="movie-info"><p class="movie-meta">Fantastique · 2020 · 2h01</p><h3>Lumen House</h3><p>Une maison ne s'ouvre qu'à ceux qui ont perdu le chemin.</p></div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p id="movie-count">Catalogue : 0 films disponibles</p>
+    <p class="footer-note">StreamFlix · J4 JavaScript</p>
+  </footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-content">
+      <button class="close" type="button" aria-label="Fermer">&times;</button>
+      <p class="section-kicker">Fiche du film</p>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+</body>
+</html>
